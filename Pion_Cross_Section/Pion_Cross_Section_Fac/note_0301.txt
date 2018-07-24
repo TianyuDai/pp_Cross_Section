@@ -1,0 +1,10 @@
+sqrt(s) = 200GeV
+y_1 = y = 0
+p_T = 5GeV ~ 20GeV(100Gev)
+plot d\sigma 
+scale = p_T of hadron
+large p_T: indicate large momentum transfer
+3 different scale: 
+pdf: factorization scale
+cross section: renormalization scale
+ff: fragmentation scale

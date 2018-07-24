@@ -1,0 +1,73 @@
+import numpy as np
+import matplotlib.pyplot as plt
+data = np.loadtxt("jet-1")
+exp_data = np.loadtxt("exp-1")
+def_data = np.loadtxt("def-1")
+
+plt.figure()
+plt.errorbar(data.T[0], data.T[1], yerr=data.T[2], fmt='o', markersize=1, label='Pythia', capsize=2, elinewidth=0.5)
+plt.yscale("log")
+plt.xlim = (80, 800)
+exp_err = [exp_data.T[2], exp_data.T[3]] 
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_err, fmt='o', markersize=1, label='ATLAS(2011)', capsize=2, elinewidth=0.5)
+plt.errorbar(def_data.T[0], def_data.T[1], yerr=def_data.T[2], fmt='o', markersize=1, label='default', capsize=2, elinewidth=0.5)
+plt.ylabel("$d\sigma/dp(pb/GeV)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.title("pp cross section of leading jet (R=0.4) at $\sqrt{s}=7000GeV$")
+plt.savefig("LeadingJet.pdf")
+plt.show()
+
+data = np.loadtxt("jet-2")
+exp_data = np.loadtxt("exp-2")
+def_data = np.loadtxt("def-2")
+
+plt.figure()
+plt.errorbar(data.T[0], data.T[1], yerr=data.T[2], fmt='o', markersize=1, label='Pythia', capsize=2, elinewidth=0.5)
+plt.yscale("log")
+plt.xlim = (60, 800)
+exp_err = [exp_data.T[2], exp_data.T[3]] 
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_err, fmt='o', markersize=1, label='ATLAS(2011)', capsize=2, elinewidth=0.5)
+plt.errorbar(def_data.T[0], def_data.T[1], yerr=def_data.T[2], fmt='o', markersize=1, label='default', capsize=2, elinewidth=0.5)
+plt.ylabel("$d\sigma/dp(pb/GeV)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.title("pp cross section of 2nd jet (R=0.4) at $\sqrt{s}=7000GeV$")
+plt.savefig("2ndJet.pdf")
+plt.show()
+
+data = np.loadtxt("jet-3")
+exp_data = np.loadtxt("exp-3")
+def_data = np.loadtxt("def-3")
+
+plt.figure()
+plt.errorbar(data.T[0], data.T[1], yerr=data.T[2], fmt='o', markersize=1, label='Pythia', capsize=2, elinewidth=0.5)
+plt.yscale("log")
+plt.xlim = (60, 500)
+exp_err = [exp_data.T[2], exp_data.T[3]] 
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_err, fmt='o', markersize=1, label='ATLAS(2011)', capsize=2, elinewidth=0.5)
+plt.errorbar(def_data.T[0], def_data.T[1], yerr=def_data.T[2], fmt='o', markersize=1, label='default', capsize=2, elinewidth=0.5)
+plt.ylabel("$d\sigma/dp(pb/GeV)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.title("pp cross section of 3rd jet (R=0.4) at $\sqrt{s}=7000GeV$")
+plt.savefig("3rdJet.pdf")
+plt.show()
+
+data = np.loadtxt("jet-4")
+exp_data = np.loadtxt("exp-4")
+def_data = np.loadtxt("def-4")
+
+plt.figure()
+plt.errorbar(data.T[0], data.T[1], yerr=data.T[2], fmt='o', markersize=1, label='Pythia', capsize=2, elinewidth=0.5)
+plt.yscale("log")
+plt.xlim = (60, 210)
+exp_err = [exp_data.T[2], exp_data.T[3]] 
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_err, fmt='o', markersize=1, label='ATLAS(2011)', capsize=2, elinewidth=0.5)
+plt.errorbar(def_data.T[0], def_data.T[1], yerr=def_data.T[2], fmt='o', markersize=1, label='default', capsize=2, elinewidth=0.5)
+plt.ylabel("$d\sigma/dp(pb/GeV)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.title("pp cross section of 4th jet (R=0.4) at $\sqrt{s}=7000GeV$")
+plt.savefig("4thJet.pdf")
+plt.show()

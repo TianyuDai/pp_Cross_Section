@@ -1,0 +1,9 @@
+1. Bias Selection: pT_pow4
+2. HardQCD=on SoftQCD=? 
+3. inelastic collision: radiation? cross section: multiply with the factor out of generated particles
+   elastic: same final state as initial state(p+p->p+p, g+g->g+g), inelastic: different final state(p+p->x, g->gg, g->q+qbar+g), not necessary to be radiation
+   radiation: inelastic(g->gg)
+4. difference between hard process and soft process
+   soft: small deviation
+   hard: large deviation(large pT), pQCD region, don't need to be midrapidity(just not accurate in finite rapidity)
+5. calculate errorbar

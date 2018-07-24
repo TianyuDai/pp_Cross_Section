@@ -1,0 +1,8 @@
+1. Add syst and stat error
+2. same plot: \lambda_QCD = 0.1/0.15/0.2
+   show \alpha_S(M_z)
+3. replace CTEQ5 by LHAPDF
+4. compare CTEQ5 with CTEQ6
+5. Try different Q's value of scale
+   Q=p_T, 1/2p_T, 2p_T
+   Q=p_T of parton (p_T/z_c)

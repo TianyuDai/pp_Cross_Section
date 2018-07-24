@@ -1,0 +1,20 @@
+import matplotlib.pyplot as plt
+import numpy as np
+data = np.loadtxt("cs8_500000")
+exp_data_PHENIX = np.loadtxt("cross_section_pi0_exp_PHENIX_2007.txt")
+comp_data = np.loadtxt("cross_section_pi0.txt")
+
+plt.figure()
+plt.errorbar(data.T[0], data.T[1], yerr=data.T[2], fmt='o', markersize=1, label='Pythia', capsize=2, elinewidth=0.5)
+plt.yscale("log")
+plt.xlim = (2, 22)
+err2 = np.sqrt(exp_data_PHENIX.T[2]**2+exp_data_PHENIX.T[3]**2) 
+plt.errorbar(exp_data_PHENIX.T[0], exp_data_PHENIX.T[1], yerr=err2, fmt='o', markersize=1, label='PHENIX(2007)', capsize=2, elinewidth=0.5)
+plt.plot(comp_data.T[0], comp_data.T[1], label='factorization')
+plt.ylabel("$Ed^3\sigma/dp^3(mb\cdot GeV^{-2}c^3)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.xticks(np.arange(4.0, 22, 2))
+plt.title("pp cross section of midrapidity $\Pi^0$ production at $\sqrt{s}=200GeV$")
+plt.savefig("cs8.pdf")
+plt.show()

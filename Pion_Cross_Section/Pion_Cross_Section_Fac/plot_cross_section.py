@@ -1,0 +1,25 @@
+import numpy as np
+import matplotlib.pyplot as plt
+comp_data = np.loadtxt("cross_section_pi0_2.txt")
+exp_data = np.loadtxt("cross_section_pi0_exp.txt")
+
+plt.figure()
+plt.plot(comp_data.T[0], comp_data.T[1], label='comp')
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_data.T[2], fmt='o', markersize=1, label='exp')
+plt.ylabel("$Ed^3\sigma/dp^3(mb\cdot GeV^{-2}c^3)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.xlim(4, 15)
+plt.title("pp cross section of midrapidity $\Pi^0$ productionlk at $\sqrt{s}=200GeV$")
+plt.savefig("cross_setion.pdf")
+
+plt.figure()
+plt.yscale("log")
+plt.plot(comp_data.T[0], comp_data.T[1], label='comp')
+plt.errorbar(exp_data.T[0], exp_data.T[1], yerr=exp_data.T[2], fmt='o', markersize=1, label='exp', capsize=2, elinewidth=0.5)
+plt.ylabel("$Ed^3\sigma/dp^3(mb\cdot GeV^{-2}c^3)$")
+plt.xlabel("$p_T(GeV/c)$")
+plt.legend()
+plt.xlim(4, 15)
+plt.title("pp cross section of midrapidity $\Pi^0$ productionlk at $\sqrt{s}=200GeV$")
+plt.savefig("cross_setion_log.pdf")
